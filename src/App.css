@@ -1,0 +1,111 @@
+.App {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.coworkers {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.coworker {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 5px 5px 21px 3px rgba(0,0,0,0);
+  padding: 10px;
+  transform-origin: 50% 50%;
+  transform: scale(1);
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.coworker.inactive {
+  opacity: 0.2;
+  transform: scale(0.9);
+}
+
+.coworker.active {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 5px 5px 21px 3px rgba(0,0,0,0.73);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.h2 {
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+.randomizer {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  height: 100%;
+}
+
+.randomizer__wrapper {
+  align-items: center;
+  align-self: center;
+  display: grid;
+}
+
+.coworker__emoji {
+  font-size: 34px;
+}
+
+.coworker.active .coworker__emoji {
+  animation: spin 2s linear infinite;
+}
+
+.coworker__name {
+  font-size: 20px;
+  margin: 0;
+}
+
+.subtitle {
+  background-color: rgb(80, 155, 230);
+}
+
+.App-header {
+  background-color: rgb(10, 208, 111);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.content {
+  background-size: cover;
+  height: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  background-color: rgb(80, 155, 230);;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 5px 5px 21px 3px rgba(0,0,0,0.23);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+}
