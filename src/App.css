@@ -18,10 +18,19 @@
   border-radius: 10px;
   box-shadow: 5px 5px 21px 3px rgba(0,0,0,0);
   padding: 10px;
+  position: relative;
   transform-origin: 50% 50%;
   transform: scale(1);
   transition: 0.3s;
   opacity: 1;
+}
+
+.coworker__remove {
+  color:rgb(230, 80, 80);
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .coworker.inactive {

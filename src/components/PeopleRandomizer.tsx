@@ -22,15 +22,19 @@ const PeopleRandomizer = ({ coworkers } : { coworkers: Array<Coworker> }) => {
         const pickedIndex = Math.floor(Math.random() * toPickCoworkers.length - 1) + 1
         const newPicked = toPickCoworkers[pickedIndex]
         setCurSelected(newPicked)
-        setPickedCoworkers([
-            ...pickedCoworkers,
-            newPicked
-        ])
+        removeUser(newPicked)
     }
 
     let pickedName: string = ''
     if (curSelected) {
         pickedName = `${curSelected.firstname} ${curSelected.lastname}`
+    }
+
+    const removeUser = (coworker: Coworker) => {
+        setPickedCoworkers([
+            ...pickedCoworkers,
+            coworker
+        ])
     }
 
     return (
@@ -50,7 +54,8 @@ const PeopleRandomizer = ({ coworkers } : { coworkers: Array<Coworker> }) => {
                                 isActive={isActive} 
                                 isInactive={isInactive} 
                                 coworker={c} 
-                                key={name} 
+                                key={name}
+                                onRemove={removeUser}
                             />
                         )
                     })}
