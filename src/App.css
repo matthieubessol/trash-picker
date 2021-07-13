@@ -38,11 +38,36 @@
   transform: scale(0.9);
 }
 
+@keyframes appear {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(720deg); } 
+}
+
 .coworker.active {
+  animation: appear 0.5s forwards;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 5px 5px 21px 3px rgba(0,0,0,0.73);
   transform: scale(1.1);
   opacity: 1;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  15% { color: aqua; }
+  25% { color: blue; }
+  15% { color: darkkhaki; }
+  50% { color: orange; }
+  60% { color: green; }
+  70% { color: purple; }
+  80% { color: pink; }
+  90% { color: yellow; }
+  100% { color: red; }
+}
+
+.coworker.active .coworker__name {
+  animation: color-change 1s infinite;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .h2 {
