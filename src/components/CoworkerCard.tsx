@@ -4,7 +4,7 @@ const CoworkerCard = ({coworker, isActive, isInactive}: { coworker: Coworker, is
     <div className={`coworker ${isActive ? 'active' : ''} ${isInactive ? 'inactive' : ''}`}>
         <div className="coworker__emoji">{coworker.emoji}</div>
         <p className="coworker__name">{coworker.firstname} {coworker.lastname}</p>
-        <p className="coworker__info">{coworker.job} - {`${coworker.age >= 30 ? '👴 <- vieu' : `${coworker.age} ans` }`}</p>
+        <p className="coworker__info">{coworker.job} - {`${coworker.age >= 30 ? '👴 <- vieux' : `${coworker.age} ans` }`}</p>
     </div>
 )
 
