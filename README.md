@@ -1,8 +1,8 @@
 # trash-picker
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+First discovery of TypeScript, single page website to define who is going to pick up the trash.  
+**Demo** : https://matthieubessol.github.io/trash-picker
 
 ## Available Scripts
 
