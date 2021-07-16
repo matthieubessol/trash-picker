@@ -2,56 +2,56 @@ export const people = [
     {
         "emoji": "📈",
         "firstname": "Thibaut",
-        "lastname": "Bayer",
+        "lastname": "Testeur de bureau",
         "age": 34,
         "job": "cto"
     },
     {
         "emoji": "🤙",
-        "firstname": "Matthieu",
-        "lastname": "Bessol",
+        "firstname": "Mat",
+        "lastname": "Thieu",
         "age": 25,
         "job": "dev"
     },
     {
         "emoji": "📷",
-        "firstname": "Audrey",
-        "lastname": "Lamy",
+        "firstname": "Au",
+        "lastname": "Drey",
         "age": 30,
         "job": "dev"
     },
     {
         "emoji": "🎤",
         "firstname": "Martin",
-        "lastname": "Sogno",
+        "lastname": "Pétanque",
         "age": 24,
         "job": "data"
     },
     {
         "emoji": "🐈",
         "firstname": "Émilien",
-        "lastname": "Wauquier",
+        "lastname": "Les Chats",
         "age": 33,
         "job": "data"
     },
     {
         "emoji": "🚴‍♂️",
-        "firstname": "Florian",
-        "lastname": "Carpentier",
+        "firstname": "Zii",
+        "lastname": "Trus",
         "age": 27,
         "job": "infra"
     },
     {
         "emoji": "🛴",
-        "firstname": "Antoine",
-        "lastname": "Raynal",
+        "firstname": "Ant",
+        "lastname": "Oine",
         "age": 24,
         "job": "design"
     },
     {
         "emoji": "💪",
-        "firstname": "Nassim",
-        "lastname": "Ben Iken",
+        "firstname": "Nas",
+        "lastname": "Sim",
         "age": 26,
         "job": "dev"
     }
