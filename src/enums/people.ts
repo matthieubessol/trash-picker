@@ -21,9 +21,9 @@ export const people = [
         "job": "dev"
     },
     {
-        "emoji": "🎤",
-        "firstname": "Martin",
-        "lastname": "Pétanque",
+        "emoji": "🍕",
+        "firstname": "Massimo",
+        "lastname": "data-lien",
         "age": 24,
         "job": "data"
     },
