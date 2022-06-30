@@ -47,12 +47,5 @@ export const people = [
         "lastname": "Oine",
         "age": 24,
         "job": "design"
-    },
-    {
-        "emoji": "💪",
-        "firstname": "Nas",
-        "lastname": "Sim",
-        "age": 26,
-        "job": "dev"
     }
 ]
