@@ -25,12 +25,14 @@ const Home = () => {
   });
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Tu seras la poubelle pour aller danser</h1>
+    <div className="grid min-h-screen text-center">
+      <header className="flex flex-col items-center justify-center bg-green-400">
+        <h1 className="text-2xl font-bold text-white">
+          Tu seras la poubelle pour aller danser
+        </h1>
       </header>
       <div
-        className="content"
+        className="bg-cover"
         style={{
           backgroundImage: `url(/philippe.jpg)`,
         }}

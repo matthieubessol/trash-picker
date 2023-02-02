@@ -38,12 +38,12 @@ const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
   };
 
   return (
-    <div className="randomizer">
-      <div className="subtitle">
-        <h2 className="h2">La roue de la fortune</h2>
+    <div className="h-full">
+      <div className="bg-blue-400">
+        <h2 className="m-0 p-2.5 text-white">La roue de la fortune</h2>
       </div>
-      <div className="randomizer__wrapper">
-        <div className="coworkers">
+      <div className="grid items-center self-center">
+        <div className="grid grid-cols-3 items-center gap-5 p-5">
           {coworkers.map((c: Coworker) => {
             const name: string = `${c.firstname} ${c.lastname}`;
             const isActive: boolean = pickedName === name;
@@ -64,7 +64,10 @@ const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
         </div>
 
         <div>
-          <button onClick={pickRandom}>
+          <button
+            className="cursor-pointer rounded-xl bg-blue-400 p-2.5 font-bold text-white shadow-lg"
+            onClick={pickRandom}
+          >
             On fait tourner la roue lezgoooo !
           </button>
           <p>J'ai pas eu le temps de faire une roue de la fortune tmtc</p>
