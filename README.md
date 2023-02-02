@@ -1,6 +1,6 @@
 # trash-picker
 
-This projets uses next.js
+This projets uses next.js, https://trash-picker.vercel.app/
 
 ## Install
 
