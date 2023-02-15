@@ -25,18 +25,18 @@ const Home = () => {
   });
 
   return (
-    <div className="grid min-h-screen text-center">
-      <header className="flex flex-col items-center justify-center bg-green-400">
-        <h1 className="text-2xl font-bold text-white">
-          Tu seras la poubelle pour aller danser
-        </h1>
-      </header>
-      <div
-        className="bg-cover"
-        style={{
-          backgroundImage: `url(/philippe.jpg)`,
-        }}
-      >
+    <div
+      className="grid min-h-screen bg-black bg-opacity-50 bg-cover text-center"
+      style={{
+        backgroundImage: `url(/bill.jpg)`,
+      }}
+    >
+      <div className="grid bg-black bg-opacity-50">
+        <header className="flex flex-col items-center justify-center ">
+          <h1 className="text-3xl font-bold text-white">
+            Tu seras la poubelle pour aller danser
+          </h1>
+        </header>
         <PeopleRandomizer coworkers={coworkers} />
       </div>
     </div>

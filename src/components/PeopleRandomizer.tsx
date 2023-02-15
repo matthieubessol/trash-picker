@@ -39,9 +39,7 @@ const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
 
   return (
     <div className="h-full">
-      <div className="bg-blue-400">
-        <h2 className="m-0 p-2.5 text-white">La roue de la fortune</h2>
-      </div>
+      <h2 className="m-0 mb-2.5 text-white">La roue de la fortune</h2>
       <div className="grid items-center self-center">
         <div className="grid grid-cols-3 items-center gap-5 p-5">
           {coworkers.map((c: Coworker) => {
@@ -65,12 +63,11 @@ const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
 
         <div>
           <button
-            className="cursor-pointer rounded-xl bg-blue-400 p-2.5 font-bold text-white shadow-lg"
+            className="mr-2 mb-2 rounded-lg bg-blue-700 px-10 py-5 text-lg font-medium text-white hover:bg-blue-800 focus:outline-none  focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700"
             onClick={pickRandom}
           >
             On fait tourner la roue lezgoooo !
           </button>
-          <p>J'ai pas eu le temps de faire une roue de la fortune tmtc</p>
         </div>
       </div>
     </div>
