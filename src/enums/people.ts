@@ -52,7 +52,7 @@ export const people = [
     emoji: "🎸",
     firstname: "Kri",
     lastname: "Ko",
-    age: 29,
+    age: 28,
     job: "infra",
   },
 ];
