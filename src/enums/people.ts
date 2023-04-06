@@ -48,4 +48,11 @@ export const people = [
     age: 24,
     job: "design",
   },
+  {
+    emoji: "🛴",
+    firstname: "Kri",
+    lastname: "Ko",
+    age: 29,
+    job: "infra",
+  },
 ];
