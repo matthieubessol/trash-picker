@@ -49,7 +49,7 @@ export const people = [
     job: "design",
   },
   {
-    emoji: "🛴",
+    emoji: "🎸",
     firstname: "Kri",
     lastname: "Ko",
     age: 29,
