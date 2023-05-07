@@ -1,28 +1,16 @@
-import React from "react";
 import PeopleRandomizer from "../components/PeopleRandomizer";
-import { people } from "../enums/people";
-import { Coworker, Job } from "../types/index";
+import { People } from "../types/index";
+import { db } from "@vercel/postgres";
 
-interface RawCoworker {
-  emoji: string;
-  firstname: string;
-  lastname: string;
-  age: number;
-  job: string;
-}
+const getCorworkers = async (): Promise<People[]> => {
+  const client = await db.connect();
+  const results = await client.sql<People>`SELECT * FROM people`;
+  const people = results.rows;
+  return people;
+};
 
-const Home = () => {
-  const coworkers: Coworker[] = people.map((p: RawCoworker) => {
-    let job: Job | undefined = undefined;
-    if (Object.keys(Job).includes(p.job)) {
-      job = Job[p.job as keyof typeof Job];
-    }
-
-    return {
-      ...p,
-      job,
-    };
-  });
+const Home = async () => {
+  const coworkers = await getCorworkers();
 
   return (
     <div

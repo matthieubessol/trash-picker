@@ -1,17 +1,17 @@
+"use client";
+
 import React, { useState } from "react";
-import { Coworker } from "../types";
+import { People } from "../types";
 import CoworkerCard from "./CoworkerCard";
 
-const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
-  const [curSelected, setCurSelected] = useState<Coworker | null>(null);
-  const [pickedCoworkers, setPickedCoworkers] = useState<Array<Coworker>>([]);
-  const namesPicked: string[] = pickedCoworkers.map(
-    (c: Coworker) => `${c.firstname} ${c.lastname}`
-  );
+const PeopleRandomizer = ({ coworkers }: { coworkers: People[] }) => {
+  const [curSelected, setCurSelected] = useState<People | null>(null);
+  const [pickedCoworkers, setPickedCoworkers] = useState<People[]>([]);
+  const namesPicked: string[] = pickedCoworkers.map((c: People) => c.name);
 
   const pickRandom = (): void => {
     const toPickCoworkers = coworkers.filter(
-      (c: Coworker) => !namesPicked.includes(`${c.firstname} ${c.lastname}`)
+      (c: People) => !namesPicked.includes(c.name)
     );
 
     if (!toPickCoworkers?.length) {
@@ -30,10 +30,10 @@ const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
 
   let pickedName: string = "";
   if (curSelected) {
-    pickedName = `${curSelected.firstname} ${curSelected.lastname}`;
+    pickedName = curSelected.name;
   }
 
-  const removeUser = (coworker: Coworker) => {
+  const removeUser = (coworker: People) => {
     setPickedCoworkers([...pickedCoworkers, coworker]);
   };
 
@@ -42,12 +42,10 @@ const PeopleRandomizer = ({ coworkers }: { coworkers: Array<Coworker> }) => {
       <h2 className="m-0 mb-2.5 text-white">La roue de la fortune</h2>
       <div className="grid items-center self-center">
         <div className="grid grid-cols-3 items-center gap-5 p-5">
-          {coworkers.map((c: Coworker) => {
-            const name: string = `${c.firstname} ${c.lastname}`;
+          {coworkers.map((c: People) => {
+            const name: string = c.name;
             const isActive: boolean = pickedName === name;
-            const isInactive: boolean = namesPicked.includes(
-              `${c.firstname} ${c.lastname}`
-            );
+            const isInactive: boolean = namesPicked.includes(c.name);
 
             return (
               <CoworkerCard

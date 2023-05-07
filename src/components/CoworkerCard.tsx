@@ -1,18 +1,20 @@
-import { Coworker } from "../types";
+import { People } from "../types";
+
+interface CoworkerCardProps {
+  coworker: People;
+  isActive: boolean;
+  isInactive: boolean;
+  onRemove: (coworker: People) => void;
+}
 
 const CoworkerCard = ({
   coworker,
   isActive,
   isInactive,
   onRemove,
-}: {
-  coworker: Coworker;
-  isActive: boolean;
-  isInactive: boolean;
-  onRemove: (coworker: Coworker) => void;
-}) => (
+}: CoworkerCardProps) => (
   <div
-    className={` relative grid origin-center scale-100 gap-1.5 overflow-hidden rounded-lg border border-gray-200 bg-white p-2.5  shadow-lg duration-300 ${
+    className={`relative grid origin-center scale-100 gap-1.5 overflow-hidden rounded-lg border border-gray-200 bg-white p-2.5  shadow-lg duration-300 ${
       isInactive && !isActive ? "scale-90 opacity-20" : ""
     } ${
       isActive
@@ -34,7 +36,7 @@ const CoworkerCard = ({
         isActive ? "text-color-change text-2xl " : ""
       }`}
     >
-      {coworker.firstname} {coworker.lastname}
+      {coworker.name}
     </p>
     <p className="text-md">
       {coworker.job} -{" "}
@@ -42,10 +44,5 @@ const CoworkerCard = ({
     </p>
   </div>
 );
-
-CoworkerCard.defaultProps = {
-  isActive: false,
-  isInactive: false,
-};
 
 export default CoworkerCard;
