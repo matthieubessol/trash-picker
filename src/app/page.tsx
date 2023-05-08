@@ -1,5 +1,5 @@
 import PeopleRandomizer from "../components/PeopleRandomizer";
-import { getCorworkers } from "../actions/coworkers/getCoworkers";
+import { getCorworkers } from "./actions/coworkers/getCoworkers";
 
 const Home = async () => {
   const coworkers = await getCorworkers();
