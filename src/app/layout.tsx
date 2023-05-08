@@ -1,5 +1,6 @@
 import "../App.css";
 import "../index.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -11,6 +12,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>{children}</body>
+      <Analytics />
     </html>
   );
 }

@@ -1,13 +1,5 @@
 import PeopleRandomizer from "../components/PeopleRandomizer";
-import { People } from "../types/index";
-import { db } from "@vercel/postgres";
-
-const getCorworkers = async (): Promise<People[]> => {
-  const client = await db.connect();
-  const results = await client.sql<People>`SELECT * FROM people`;
-  const people = results.rows;
-  return people;
-};
+import { getCorworkers } from "./api/coworkers/getCoworkers";
 
 const Home = async () => {
   const coworkers = await getCorworkers();
