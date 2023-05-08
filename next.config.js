@@ -1,5 +1,5 @@
 const nextConfig = {
-  experimental: { appDir: true },
+  experimental: { appDir: true, serverActions: true },
 };
 
 module.exports = nextConfig;
