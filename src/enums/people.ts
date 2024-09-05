@@ -21,11 +21,11 @@ export const people = [
     job: "dev",
   },
   {
-    emoji: "🎧",
-    firstname: "Guillaume",
-    lastname: "data-lien",
+    emoji: "🏓",
+    firstname: "Fé",
+    lastname: "Fé",
     age: 24,
-    job: "data",
+    job: "produit",
   },
   {
     emoji: "🐈",
@@ -36,17 +36,10 @@ export const people = [
   },
   {
     emoji: "🚴‍♂️",
-    firstname: "Vive",
-    lastname: "Viane",
-    age: 27,
-    job: "dev",
-  },
-  {
-    emoji: "🛴",
-    firstname: "Ant",
-    lastname: "Oine",
+    firstname: "Jo",
+    lastname: "Jo",
     age: 24,
-    job: "design",
+    job: "data",
   },
   {
     emoji: "🎸",
@@ -54,12 +47,5 @@ export const people = [
     lastname: "Ko",
     age: 28,
     job: "infra",
-  },
-  {
-    emoji: "🎨",
-    firstname: "Lu",
-    lastname: "Cie. ©",
-    age: 1,
-    job: "design",
   },
 ];
